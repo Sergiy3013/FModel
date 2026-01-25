@@ -27,6 +27,8 @@ namespace FModel;
 /// </summary>
 public partial class App
 {
+    private const int MaxListResults = 100;
+    
     [DllImport("kernel32.dll")]
     private static extern bool AttachConsole(int dwProcessId);
 
@@ -184,8 +186,8 @@ public partial class App
             Console.WriteLine("===================");
             Console.WriteLine();
             
-            // Show help if requested or no arguments
-            if (args.Length <= 1 || args.Any(a => a.Equals("--help", StringComparison.OrdinalIgnoreCase) || a.Equals("-h", StringComparison.OrdinalIgnoreCase)))
+            // Show help if requested
+            if (args.Any(a => a.Equals("--help", StringComparison.OrdinalIgnoreCase) || a.Equals("-h", StringComparison.OrdinalIgnoreCase)))
             {
                 ShowConsoleHelp();
                 return;
@@ -236,6 +238,10 @@ public partial class App
                 case "info":
                     ShowGameInfo(appViewModel);
                     break;
+                case null:
+                    Console.WriteLine("No command specified.");
+                    Console.WriteLine("Use --help for usage information.");
+                    break;
                 default:
                     Console.WriteLine($"Unknown command: {command}");
                     Console.WriteLine("Use --help for usage information.");
@@ -280,15 +286,15 @@ public partial class App
         var files = provider.Files.Values.Where(f => 
             string.IsNullOrEmpty(pattern) || 
             f.Path.Contains(pattern, StringComparison.OrdinalIgnoreCase)
-        ).Take(100).ToList();
+        ).Take(MaxListResults).ToList();
         
-        Console.WriteLine($"Found {files.Count} assets (showing first 100):");
+        Console.WriteLine($"Found {files.Count} assets (showing first {MaxListResults}):");
         foreach (var file in files)
         {
             Console.WriteLine($"  {file.Path}");
         }
         
-        if (files.Count == 100)
+        if (files.Count == MaxListResults)
         {
             Console.WriteLine();
             Console.WriteLine("... (more files available, use pattern to filter)");
@@ -318,10 +324,9 @@ public partial class App
         
         try
         {
-            var cts = new System.Threading.CancellationTokenSource();
             await Task.Run(() => 
             {
-                appViewModel.CUE4Parse.Extract(cts.Token, gameFile);
+                appViewModel.CUE4Parse.Extract(default, gameFile);
             });
             
             Console.WriteLine($"Successfully extracted: {assetPath}");
