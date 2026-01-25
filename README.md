@@ -15,6 +15,39 @@ FModel is actively maintained and developed by a dedicated community of contribu
 ### Installation:
 For installation, follow the instructions from [here](https://github.com/4sval/FModel/wiki/Installing-FModel)
 
+### Console Mode:
+FModel now supports a console mode for command-line operations without launching the GUI.
+
+**Usage:**
+```bash
+FModel.exe --console <command> [options]
+```
+
+**Commands:**
+- `info` - Display game and provider information
+- `list [pattern]` - List available assets (optional: filter by pattern)
+- `extract <path>` - Extract specified asset by path
+
+**Examples:**
+```bash
+# Show game information
+FModel.exe --console info
+
+# List all assets
+FModel.exe --console list
+
+# List assets matching a pattern
+FModel.exe --console list "FortniteGame"
+
+# Extract a specific asset
+FModel.exe --console extract "FortniteGame/Content/Items/Weapons/Rifle.uasset"
+
+# Show help
+FModel.exe --console --help
+```
+
+**Note:** Console mode requires the same configuration as the GUI mode (game directory, settings, AES keys, etc.).
+
 ### Sponsorship:
 <p>
   <a href="https://www.jetbrains.com/">
