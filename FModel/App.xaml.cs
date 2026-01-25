@@ -160,7 +160,7 @@ public partial class App
         if (isConsoleMode)
         {
             Log.Information("Running in console mode");
-            Task.Run(async () => await RunConsoleMode(args)).Wait();
+            RunConsoleMode(args).GetAwaiter().GetResult();
             Log.Information("Console mode completed");
             Log.CloseAndFlush();
             UserSettings.Save();
@@ -217,16 +217,21 @@ public partial class App
             Console.WriteLine("Initialization complete.");
             Console.WriteLine();
             
-            // Parse command
-            var command = args.FirstOrDefault(a => !a.StartsWith("-") && !a.Equals(args[0], StringComparison.OrdinalIgnoreCase));
+            // Parse command - skip executable name and console flag
+            var commandArgs = args.Skip(1) // Skip executable name
+                .Where(a => !a.Equals("--console", StringComparison.OrdinalIgnoreCase) && 
+                           !a.Equals("-c", StringComparison.OrdinalIgnoreCase))
+                .ToArray();
+            
+            var command = commandArgs.Length > 0 ? commandArgs[0] : null;
             
             switch (command?.ToLowerInvariant())
             {
                 case "list":
-                    ListAssets(args);
+                    ListAssets(commandArgs);
                     break;
                 case "extract":
-                    await ExtractAssets(args, appViewModel);
+                    await ExtractAssets(commandArgs, appViewModel);
                     break;
                 case "info":
                     ShowGameInfo(appViewModel);
@@ -263,9 +268,10 @@ public partial class App
         Console.WriteLine("  FModel.exe --console extract \"FortniteGame/Content/Items/Weapons/Rifle.uasset\"");
     }
     
-    private void ListAssets(string[] args)
+    private void ListAssets(string[] commandArgs)
     {
-        var pattern = args.Length > 2 ? args[2] : "";
+        // commandArgs[0] is "list", commandArgs[1] (if exists) is the pattern
+        var pattern = commandArgs.Length > 1 ? commandArgs[1] : "";
         var provider = ApplicationService.ApplicationView.CUE4Parse.Provider;
         
         Console.WriteLine($"Listing assets in {provider.GameDisplayName}...");
@@ -289,16 +295,17 @@ public partial class App
         }
     }
     
-    private async Task ExtractAssets(string[] args, ApplicationViewModel appViewModel)
+    private async Task ExtractAssets(string[] commandArgs, ApplicationViewModel appViewModel)
     {
-        if (args.Length < 3)
+        // commandArgs[0] is "extract", commandArgs[1] should be the asset path
+        if (commandArgs.Length < 2)
         {
             Console.WriteLine("Error: Please specify asset path to extract");
             Console.WriteLine("Usage: FModel.exe --console extract <asset_path>");
             return;
         }
         
-        var assetPath = args[2];
+        var assetPath = commandArgs[1];
         var provider = appViewModel.CUE4Parse.Provider;
         
         Console.WriteLine($"Extracting asset: {assetPath}");
