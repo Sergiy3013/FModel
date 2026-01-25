@@ -1,0 +1,238 @@
+2026-01-26 00:23:31 [INF] FModel.App.OnStartup: Version 4.4.4.0 (c7d583e2963d190020cd1ba2d629940c8ff8d0d0)
+2026-01-26 00:23:31 [INF] FModel.App.OnStartup: Windows 11 Pro (64-bit)
+2026-01-26 00:23:31 [INF] FModel.App.OnStartup: .NET 8.0.23
+2026-01-26 00:23:31 [INF] FModel.App.OnStartup: Culture uk-UA
+2026-01-26 00:23:31 [INF] FModel.App.OnStartup: Running in console mode
+FModel Console Mode
+===================
+
+Initializing FModel...
+2026-01-26 00:23:31 [INF] FModel.App+<RunConsoleMode>d__6.MoveNext: Initializing console mode with 3 arguments
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\resources\qtwebengine_devtools_resources.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\resources\qtwebengine_resources.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\resources\qtwebengine_resources_100p.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\resources\qtwebengine_resources_200p.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\am.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ar.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\bg.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\bn.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ca.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\cs.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\da.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\de.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\el.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\en-GB.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\en-US.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\es-419.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\es.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\et.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\fa.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\fi.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\fil.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\fr.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\gu.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\he.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\hi.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\hr.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\hu.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\id.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\it.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ja.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\kn.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ko.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\lt.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\lv.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ml.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\mr.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ms.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\nb.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\nl.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\pl.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\pt-BR.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\pt-PT.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ro.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ru.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\sk.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\sl.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\sr.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\sv.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\sw.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\ta.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\te.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\th.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\tr.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\uk.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\vi.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\zh-CN.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171
+2026-01-26 00:23:31 [WRN] CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs: CUE4Parse.UE4.Exceptions.ParserException: File F:\SteamLibrary\steamapps\common\Observer\GameGuide\translations\qtwebengine_locales\zh-TW.pak has an unknown format
+   at CUE4Parse.UE4.Pak.Objects.FPakInfo.ReadFPakInfo(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\Objects\FPakInfo.cs:line 475
+   at CUE4Parse.UE4.Pak.PakFileReader..ctor(FArchive Ar) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\UE4\Pak\PakFileReader.cs:line 42
+   at CUE4Parse.FileProvider.Vfs.AbstractVfsFileProvider.RegisterRandomAccessVfs(FArchive pakOrUtocArchive, FArchive utocArchive, Func`2 openContainerStreamFunc) in G:\GitHub\FModel\CUE4Parse\CUE4Parse\FileProvider\Vfs\AbstractVfsFileProvider.cs:line 171

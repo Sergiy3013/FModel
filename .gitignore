@@ -349,3 +349,12 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# FModel specific
+Output/
+ExtractLocres/publish/
+ExtractLocres/bin/
+ExtractLocres/obj/
+*.ps1
+zlib-ng2.dll
+extract_locres.ps1
