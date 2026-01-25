@@ -11,9 +11,14 @@
 ExtractLocres.exe --pak "шлях/до/файлу.pak"
 ```
 
-**Сканування папки і екстракція з усіх pak файлів:**
+**Список усіх pak файлів в папці (без екстракції):**
 ```bash
 ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks"
+```
+
+**Сканування папки і екстракція з усіх pak файлів:**
+```bash
+ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks" --include .locres
 ```
 
 ### Опції
@@ -27,7 +32,10 @@ ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks"
 | `--exclude-formats` | `-ef` | Формати для ігнорування | `-ef .uexp .ubulk` |
 | `--exclude-folders` | `-ex` | Папки для ігнорування | `-ex "Engine/Content"` |
 
-**Важливо:** Мають бути вказані або `--pak` або `--scan`, але не обидва одночасно.
+**Важливо:** 
+- Коли вказано `--scan` БЕЗ фільтрів - програма просто показує список pak файлів
+- Коли вказано `--scan` З фільтрами (`--include`, `--exclude-formats`, `--exclude-folders`) - програма витягує файли
+- Мають бути вказані або `--pak` або `--scan`, але не обидва одночасно
 
 ### Приклади
 
@@ -41,7 +49,12 @@ ExtractLocres.exe -p "Game.pak" -o "Output" -i .locres
 ExtractLocres.exe -s "C:\Games\Paks" -o "Output" -i .locres
 ```
 
-**3. Витягнути всі файли, окрім .uexp та Engine папки:**
+**3. Показати список усіх pak файлів в папці:**
+```bash
+ExtractLocres.exe -s "C:\Games\Paks"
+```
+
+**4. Витягнути всі файли, окрім .uexp та Engine папки:****
 ```bash
 ExtractLocres.exe -p "Game.pak" -o "Output" -ef .uexp .ubulk -ex "Engine/Content"
 ```
@@ -51,17 +64,22 @@ ExtractLocres.exe -p "Game.pak" -o "Output" -ef .uexp .ubulk -ex "Engine/Content
 ExtractLocres.exe -s "C:\Games\Paks" -o "Output" -ef .uexp .ubulk -ex "Engine/"
 ```
 
-**5. Витягнути тільки .uasset та .umap файли:**
+**5. Сканування папки з виключенням форматів і папок:**
+```bash
+ExtractLocres.exe -s "C:\Games\Paks" -o "Output" -ef .uexp .ubulk -ex "Engine/"
+```
+
+**6. Витягнути тільки .uasset та .umap файли:**
 ```bash
 ExtractLocres.exe -p "Game.pak" -o "Output" -i .uasset .umap
 ```
 
-**6. Сканування папки без фільтрів (витягує ВСЕ):**
+**7. Сканування папки без фільтрів (витягує ВСЕ):**
 ```bash
 ExtractLocres.exe -s "C:\Games\Paks" -o "Output"
 ```
 
-**7. Сканування з виключенням Engine папки:**
+**8. Сканування з виключенням Engine папки:**
 ```bash
 ExtractLocres.exe -s "C:\Games\Paks" -o "Output" -ex "Engine/"
 ```

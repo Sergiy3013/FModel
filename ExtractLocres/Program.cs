@@ -48,7 +48,10 @@ var excludeFoldersOption = new Option<string[]>(
 { AllowMultipleArgumentsPerToken = true };
 excludeFoldersOption.AddAlias("-ex");
 
-var rootCommand = new RootCommand("Утиліта для витягування файлів з Unreal Engine pak архівів");
+var rootCommand = new RootCommand(@"Утиліта для витягування файлів з Unreal Engine pak архівів
+
+ExtractLocres - консольна утиліта розроблена на базі бібліотеки CUE4Parse
+Розробник: https://github.com/Sergiy3013/");
 rootCommand.AddOption(pakFileOption);
 rootCommand.AddOption(scanDirOption);
 rootCommand.AddOption(outputDirOption);
@@ -90,8 +93,19 @@ rootCommand.SetHandler(async (pakFile, scanDir, outputDir, includeFormats, exclu
 
         if (!string.IsNullOrEmpty(scanDir))
         {
-            // Режим сканування
-            await ScanAndExtractPaks(scanDir, outputDir, includeFormats, excludeFormats, excludeFolders);
+            // Перевірка: якщо сканування БЕЗ фільтрів - просто показуємо список pak файлів
+            bool hasFilters = includeFormats.Length > 0 || excludeFormats.Length > 0 || excludeFolders.Length > 0;
+            
+            if (!hasFilters)
+            {
+                // Режим: тільки сканування (список pak файлів)
+                ListPakFiles(scanDir);
+            }
+            else
+            {
+                // Режим: сканування і екстракція
+                await ScanAndExtractPaks(scanDir, outputDir, includeFormats, excludeFormats, excludeFolders);
+            }
         }
         else
         {
@@ -107,6 +121,33 @@ rootCommand.SetHandler(async (pakFile, scanDir, outputDir, includeFormats, exclu
 }, pakFileOption, scanDirOption, outputDirOption, includeFormatsOption, excludeFormatsOption, excludeFoldersOption);
 
 return await rootCommand.InvokeAsync(args);
+
+// Функція для виведення списку pak файлів
+void ListPakFiles(string scanDir)
+{
+    if (!Directory.Exists(scanDir))
+    {
+        Console.WriteLine($"Помилка: Папка не знайдена: {scanDir}");
+        return;
+    }
+
+    Console.WriteLine($"Сканую папку: {scanDir}\n");
+    
+    var pakFiles = Directory.GetFiles(scanDir, "*.pak", SearchOption.AllDirectories);
+    
+    if (pakFiles.Length == 0)
+    {
+        Console.WriteLine($"Не знайдено жодного pak файлу в {scanDir}");
+        return;
+    }
+
+    Console.WriteLine($"Знайдено {pakFiles.Length} pak файлів:\n");
+    for (int i = 0; i < pakFiles.Length; i++)
+    {
+        Console.WriteLine($"{i + 1}. {pakFiles[i]}");
+    }
+    Console.WriteLine();
+}
 
 // Функція для екстракції одного pak файлу
 async Task ExtractSinglePak(string pakFile, string outputDir, string[] includeFormats, string[] excludeFormats, string[] excludeFolders)
