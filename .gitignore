@@ -352,6 +352,7 @@ MigrationBackup/
 
 # FModel specific
 Output/
+ExtractLocres/*.exe
 ExtractLocres/publish/
 ExtractLocres/bin/
 ExtractLocres/obj/

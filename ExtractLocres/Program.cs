@@ -4,6 +4,12 @@ using CUE4Parse.Compression;
 using System.CommandLine;
 using System.CommandLine.Parsing;
 using System.Text;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Compression;
+using System.CommandLine;
+using System.CommandLine.Parsing;
+using System.Text;
 
 // Налаштування UTF-8 кодування для консолі
 Console.OutputEncoding = Encoding.UTF8;
@@ -48,49 +54,57 @@ var excludeFoldersOption = new Option<string[]>(
 { AllowMultipleArgumentsPerToken = true };
 excludeFoldersOption.AddAlias("-ex");
 
+var scanPakFileOption = new Option<string>(
+    name: "--scan-pak",
+    description: "Шлях до pak файлу для сканування (без екстракції)")
+{
+    AllowMultipleArgumentsPerToken = false
+};
+scanPakFileOption.AddAlias("-sp");
+
 var rootCommand = new RootCommand(@"Утиліта для витягування файлів з Unreal Engine pak архівів
 
 ExtractLocres - консольна утиліта розроблена на базі бібліотеки CUE4Parse
 Розробник: https://github.com/Sergiy3013/");
 rootCommand.AddOption(pakFileOption);
 rootCommand.AddOption(scanDirOption);
+rootCommand.AddOption(scanPakFileOption);
 rootCommand.AddOption(outputDirOption);
 rootCommand.AddOption(includeFormatsOption);
 rootCommand.AddOption(excludeFormatsOption);
 rootCommand.AddOption(excludeFoldersOption);
 
-rootCommand.SetHandler(async (pakFile, scanDir, outputDir, includeFormats, excludeFormats, excludeFolders) =>
+rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeFormats, excludeFormats, excludeFolders) =>
 {
     try
     {
-        // Перевірка: мають бути вказані або --pak або --scan
-        if (string.IsNullOrEmpty(pakFile) && string.IsNullOrEmpty(scanDir))
+        // Перевірка: має бути вказано лише один режим
+        int modeCount = 0;
+        if (!string.IsNullOrEmpty(pakFile)) modeCount++;
+        if (!string.IsNullOrEmpty(scanDir)) modeCount++;
+        if (!string.IsNullOrEmpty(scanPakFile)) modeCount++;
+        if (modeCount != 1)
         {
-            Console.WriteLine("Помилка: Вкажіть або --pak <файл> або --scan <папка>");
+            Console.WriteLine("Помилка: Вкажіть лише одну дію: --pak <файл>, --scan <папка> або --scan-pak <файл>");
             return;
         }
-
-        if (!string.IsNullOrEmpty(pakFile) && !string.IsNullOrEmpty(scanDir))
+        // Ініціалізація Zlib (тільки якщо потрібна екстракція або повне сканування)
+        if (!string.IsNullOrEmpty(pakFile) || !string.IsNullOrEmpty(scanDir))
         {
-            Console.WriteLine("Помилка: Вкажіть або --pak <файл> або --scan <папка>, але не обидва одночасно");
-            return;
-        }
-
-        // Ініціалізація Zlib
-        var zlibPath = Path.Combine(outputDir, ".data", ZlibHelper.DLL_NAME);
-        if (!File.Exists(zlibPath))
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(zlibPath)!);
-            Console.WriteLine("Завантаження Zlib-ng...");
-            if (!await ZlibHelper.DownloadDllAsync(zlibPath))
+            var zlibPath = Path.Combine(outputDir, ".data", ZlibHelper.DLL_NAME);
+            if (!File.Exists(zlibPath))
             {
-                Console.WriteLine("Не вдалося завантажити Zlib-ng!");
-                return;
+                Directory.CreateDirectory(Path.GetDirectoryName(zlibPath)!);
+                Console.WriteLine("Завантаження Zlib-ng...");
+                if (!await ZlibHelper.DownloadDllAsync(zlibPath))
+                {
+                    Console.WriteLine("Не вдалося завантажити Zlib-ng!");
+                    return;
+                }
             }
+            ZlibHelper.Initialize(zlibPath);
+            Console.WriteLine("Zlib ініціалізовано\n");
         }
-        ZlibHelper.Initialize(zlibPath);
-        Console.WriteLine("Zlib ініціалізовано\n");
-
         if (!string.IsNullOrEmpty(scanDir))
         {
             // Перевірка: якщо сканування БЕЗ фільтрів - просто показуємо список pak файлів
@@ -107,10 +121,15 @@ rootCommand.SetHandler(async (pakFile, scanDir, outputDir, includeFormats, exclu
                 await ScanAndExtractPaks(scanDir, outputDir, includeFormats, excludeFormats, excludeFolders);
             }
         }
-        else
+        else if (!string.IsNullOrEmpty(pakFile))
         {
             // Режим екстракції одного файлу
             await ExtractSinglePak(pakFile!, outputDir, includeFormats, excludeFormats, excludeFolders);
+        }
+        else if (!string.IsNullOrEmpty(scanPakFile))
+        {
+            // Режим сканування одного pak файлу (без екстракції)
+            ScanSinglePak(scanPakFile);
         }
     }
     catch (Exception ex)
@@ -118,7 +137,7 @@ rootCommand.SetHandler(async (pakFile, scanDir, outputDir, includeFormats, exclu
         Console.WriteLine($"\nКритична помилка: {ex.Message}");
         Console.WriteLine(ex.StackTrace);
     }
-}, pakFileOption, scanDirOption, outputDirOption, includeFormatsOption, excludeFormatsOption, excludeFoldersOption);
+}, pakFileOption, scanDirOption, scanPakFileOption, outputDirOption, includeFormatsOption, excludeFormatsOption, excludeFoldersOption);
 
 return await rootCommand.InvokeAsync(args);
 
@@ -380,4 +399,28 @@ async Task<(int successCount, int errorCount)> ExtractFiles(
     }
 
     return await Task.FromResult((successCount, errorCount));
+}
+
+// Функція для сканування одного pak файлу (без екстракції)
+void ScanSinglePak(string pakFile)
+{
+    if (!File.Exists(pakFile))
+    {
+        Console.WriteLine($"Помилка: Файл не знайдено: {pakFile}");
+        return;
+    }
+
+    Console.WriteLine($"Сканую pak файл: {pakFile}");
+    var versions = new VersionContainer(EGame.GAME_UE4_LATEST);
+    var provider = new StreamedFileProvider("ScanProvider", versions);
+    provider.RegisterVfs(pakFile);
+    provider.Mount();
+    Console.WriteLine($"VFS змонтовано");
+    Console.WriteLine($"Всього файлів в pak: {provider.Files.Count}\n");
+    int i = 1;
+    foreach (var file in provider.Files)
+    {
+        Console.WriteLine($"{i++}. {file.Value.Name}");
+    }
+    Console.WriteLine();
 }

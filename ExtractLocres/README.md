@@ -27,6 +27,7 @@ ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks" --include .locres
 |-------|---------|------|---------|
 | `--pak` | `-p` | Шлях до pak файлу | `-p "Game.pak"` |
 | `--scan` | `-s` | Папка для сканування pak файлів | `-s "C:\Paks"` |
+| `--scan-pak` | `-sp` | Сканувати один pak файл (без екстракції) | `-sp "Game.pak"` |
 | `--output` | `-o` | Папка для збереження файлів | `-o "C:\Output"` |
 | `--include` | `-i` | Формати файлів для витягування | `-i .locres .uasset` |
 | `--exclude-formats` | `-ef` | Формати для ігнорування | `-ef .uexp .ubulk` |
@@ -82,6 +83,11 @@ ExtractLocres.exe -s "C:\Games\Paks" -o "Output"
 **8. Сканування з виключенням Engine папки:**
 ```bash
 ExtractLocres.exe -s "C:\Games\Paks" -o "Output" -ex "Engine/"
+```
+
+**9. Сканування одного pak файлу (без екстракції):**
+```bash
+ExtractLocres.exe --scan-pak "Game.pak"
 ```
 
 ## Особливості
