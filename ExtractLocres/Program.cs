@@ -129,7 +129,7 @@ rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeF
         else if (!string.IsNullOrEmpty(scanPakFile))
         {
             // Режим сканування одного pak файлу (без екстракції)
-            ScanSinglePak(scanPakFile);
+            ScanSinglePak(scanPakFile, includeFormats, excludeFormats, excludeFolders);
         }
     }
     catch (Exception ex)
@@ -402,7 +402,7 @@ async Task<(int successCount, int errorCount)> ExtractFiles(
 }
 
 // Функція для сканування одного pak файлу (без екстракції)
-void ScanSinglePak(string pakFile)
+void ScanSinglePak(string pakFile, string[] includeFormats = null, string[] excludeFormats = null, string[] excludeFolders = null)
 {
     if (!File.Exists(pakFile))
     {
@@ -417,10 +417,32 @@ void ScanSinglePak(string pakFile)
     provider.Mount();
     Console.WriteLine($"VFS змонтовано");
     Console.WriteLine($"Всього файлів в pak: {provider.Files.Count}\n");
+
+    // Normalize filters
+    var normalizedInclude = (includeFormats ?? Array.Empty<string>()).Select(f => f.ToLowerInvariant()).ToArray();
+    var normalizedExclude = (excludeFormats ?? Array.Empty<string>()).Select(f => f.ToLowerInvariant()).ToArray();
+    var normalizedFolders = (excludeFolders ?? Array.Empty<string>()).Select(f => f.Replace('\\', '/').TrimEnd('/') + "/").ToArray();
+
+    var filteredFiles = provider.Files.Values.Where(file => {
+        var ext = Path.GetExtension(file.Name).ToLowerInvariant();
+        var path = file.Path.Replace('\\', '/');
+        // Exclude folders
+        if (normalizedFolders.Any(folder => path.StartsWith(folder, StringComparison.OrdinalIgnoreCase)))
+            return false;
+        // Exclude formats
+        if (normalizedExclude.Contains(ext))
+            return false;
+        // Include formats
+        if (normalizedInclude.Length > 0)
+            return normalizedInclude.Contains(ext);
+        return true;
+    }).ToList();
+
+    Console.WriteLine($"Знайдено {filteredFiles.Count} файлів після фільтрації\n");
     int i = 1;
-    foreach (var file in provider.Files)
+    foreach (var file in filteredFiles)
     {
-        Console.WriteLine($"{i++}. {file.Value.Name}");
+        Console.WriteLine($"{i++}. {file.Name} ({file.Path})");
     }
     Console.WriteLine();
 }
