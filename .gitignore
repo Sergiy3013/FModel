@@ -354,6 +354,7 @@ MigrationBackup/
 Output/
 ExtractLocres/*.exe
 ExtractLocres/publish/
+ExtractLocres/publish_single/
 ExtractLocres/bin/
 ExtractLocres/obj/
 *.ps1

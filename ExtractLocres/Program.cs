@@ -442,7 +442,7 @@ void ScanSinglePak(string pakFile, string[] includeFormats = null, string[] excl
     int i = 1;
     foreach (var file in filteredFiles)
     {
-        Console.WriteLine($"{i++}. {file.Name} ({file.Path})");
+        Console.WriteLine($"{i++}. {file.Path}");
     }
     Console.WriteLine();
 }
