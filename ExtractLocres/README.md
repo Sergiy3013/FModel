@@ -32,11 +32,28 @@ ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks" --include .locres
 | `--include` | `-i` | Формати файлів для витягування/пошуку | `-i .locres .uasset` |
 | `--exclude-formats` | `-ef` | Формати для ігнорування | `-ef .uexp .ubulk` |
 | `--exclude-folders` | `-ex` | Папки для ігнорування | `-ex "Engine/Content"` |
+| `--extract-path` | `-ep` | Витягнути конкретний файл або папку (можна декілька) | `-ep "SomeFolder/" "SomeFile.uasset"` |
+
 
 **Важливо:** 
 - Коли вказано `--scan` БЕЗ фільтрів - програма просто показує список pak файлів
-- Коли вказано `--scan` З фільтрами (`--include`, `--exclude-formats`, `--exclude-folders`) - програма витягує файли
+- Коли вказано `--scan` З фільтрами (`--include`, `--exclude-formats`, `--exclude-folders`, `--extract-path`) - програма витягує файли
 - Мають бути вказані або `--pak` або `--scan`, але не обидва одночасно
+- Якщо вказано `--extract-path`, будуть витягнуті лише файли/папки, що відповідають цим шляхам (відносно кореня pak)
+**10. Витягнути конкретний файл з pak:**
+```bash
+ExtractLocres.exe -p "Game.pak" -o "Output" -ep "SomeFolder/SomeFile.uasset"
+```
+
+**11. Витягнути всю папку з pak:**
+```bash
+ExtractLocres.exe -p "Game.pak" -o "Output" -ep "SomeFolder/"
+```
+
+**12. Витягнути декілька файлів/папок:**
+```bash
+ExtractLocres.exe -p "Game.pak" -o "Output" -ep "SomeFolder/SomeFile.uasset" "OtherFolder/"
+```
 
 ### Приклади
 

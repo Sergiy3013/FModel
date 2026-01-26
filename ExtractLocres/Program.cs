@@ -62,6 +62,12 @@ var scanPakFileOption = new Option<string>(
 };
 scanPakFileOption.AddAlias("-sp");
 
+var extractPathOption = new Option<string[]>(
+    name: "--extract-path",
+    description: "Шлях(и) до конкретного файлу або папки для екстракції (відносно кореня pak)")
+{ AllowMultipleArgumentsPerToken = true };
+extractPathOption.AddAlias("-ep");
+
 var rootCommand = new RootCommand(@"Утиліта для витягування файлів з Unreal Engine pak архівів
 
 ExtractLocres - консольна утиліта розроблена на базі бібліотеки CUE4Parse
@@ -73,8 +79,9 @@ rootCommand.AddOption(outputDirOption);
 rootCommand.AddOption(includeFormatsOption);
 rootCommand.AddOption(excludeFormatsOption);
 rootCommand.AddOption(excludeFoldersOption);
+rootCommand.AddOption(extractPathOption);
 
-rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeFormats, excludeFormats, excludeFolders) =>
+rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeFormats, excludeFormats, excludeFolders, extractPaths) =>
 {
     try
     {
@@ -108,7 +115,7 @@ rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeF
         if (!string.IsNullOrEmpty(scanDir))
         {
             // Перевірка: якщо сканування БЕЗ фільтрів - просто показуємо список pak файлів
-            bool hasFilters = includeFormats.Length > 0 || excludeFormats.Length > 0 || excludeFolders.Length > 0;
+            bool hasFilters = includeFormats.Length > 0 || excludeFormats.Length > 0 || excludeFolders.Length > 0 || (extractPaths != null && extractPaths.Length > 0);
             
             if (!hasFilters)
             {
@@ -118,13 +125,13 @@ rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeF
             else
             {
                 // Режим: сканування і екстракція
-                await ScanAndExtractPaks(scanDir, outputDir, includeFormats, excludeFormats, excludeFolders);
+                await ScanAndExtractPaks(scanDir, outputDir, includeFormats, excludeFormats, excludeFolders, extractPaths);
             }
         }
         else if (!string.IsNullOrEmpty(pakFile))
         {
             // Режим екстракції одного файлу
-            await ExtractSinglePak(pakFile!, outputDir, includeFormats, excludeFormats, excludeFolders);
+            await ExtractSinglePak(pakFile!, outputDir, includeFormats, excludeFormats, excludeFolders, extractPaths);
         }
         else if (!string.IsNullOrEmpty(scanPakFile))
         {
@@ -137,7 +144,7 @@ rootCommand.SetHandler(async (pakFile, scanDir, scanPakFile, outputDir, includeF
         Console.WriteLine($"\nКритична помилка: {ex.Message}");
         Console.WriteLine(ex.StackTrace);
     }
-}, pakFileOption, scanDirOption, scanPakFileOption, outputDirOption, includeFormatsOption, excludeFormatsOption, excludeFoldersOption);
+}, pakFileOption, scanDirOption, scanPakFileOption, outputDirOption, includeFormatsOption, excludeFormatsOption, excludeFoldersOption, extractPathOption);
 
 return await rootCommand.InvokeAsync(args);
 
@@ -169,7 +176,7 @@ void ListPakFiles(string scanDir)
 }
 
 // Функція для екстракції одного pak файлу
-async Task ExtractSinglePak(string pakFile, string outputDir, string[] includeFormats, string[] excludeFormats, string[] excludeFolders)
+async Task ExtractSinglePak(string pakFile, string outputDir, string[] includeFormats, string[] excludeFormats, string[] excludeFolders, string[]? extractPaths = null)
 {
     if (!File.Exists(pakFile))
     {
@@ -206,11 +213,11 @@ async Task ExtractSinglePak(string pakFile, string outputDir, string[] includeFo
     Console.WriteLine($"VFS змонтовано");
     Console.WriteLine($"Всього файлів в pak: {provider.Files.Count}\n");
 
-    await ExtractFiles(provider, outputDir, includeFormats, excludeFormats, excludeFolders, pakFile);
+    await ExtractFiles(provider, outputDir, includeFormats, excludeFormats, excludeFolders, pakFile, extractPaths);
 }
 
 // Функція для сканування і екстракції всіх pak файлів
-async Task ScanAndExtractPaks(string scanDir, string outputDir, string[] includeFormats, string[] excludeFormats, string[] excludeFolders)
+async Task ScanAndExtractPaks(string scanDir, string outputDir, string[] includeFormats, string[] excludeFormats, string[] excludeFolders, string[]? extractPaths = null)
 {
     if (!Directory.Exists(scanDir))
     {
@@ -273,7 +280,7 @@ async Task ScanAndExtractPaks(string scanDir, string outputDir, string[] include
             provider.Mount();
             Console.WriteLine($"VFS змонтовано, файлів: {provider.Files.Count}");
 
-            var (successCount, errorCount) = await ExtractFiles(provider, outputDir, includeFormats, excludeFormats, excludeFolders, pakFile);
+            var (successCount, errorCount) = await ExtractFiles(provider, outputDir, includeFormats, excludeFormats, excludeFolders, pakFile, extractPaths);
             
             totalSuccess += successCount;
             totalErrors += errorCount;
@@ -302,7 +309,8 @@ async Task<(int successCount, int errorCount)> ExtractFiles(
     string[] includeFormats, 
     string[] excludeFormats, 
     string[] excludeFolders,
-    string pakFileName)
+    string pakFileName,
+    string[]? extractPaths = null)
 {
     // Нормалізація форматів
     var normalizedInclude = includeFormats
@@ -320,33 +328,46 @@ async Task<(int successCount, int errorCount)> ExtractFiles(
         .ToArray();
 
     // Фільтрація файлів
+
     var filesToExtract = provider.Files.Keys.Where(filePath =>
     {
         var fileExt = Path.GetExtension(filePath).ToLowerInvariant();
-        
+        var normalizedPath = filePath.Replace('\\', '/');
+
+        // Якщо вказано extractPaths, фільтруємо тільки по них (шлях або початок шляху)
+        if (extractPaths != null && extractPaths.Length > 0)
+        {
+            foreach (var ep in extractPaths)
+            {
+                var epNorm = ep.Replace('\\', '/').TrimStart('/');
+                if (normalizedPath.Equals(epNorm, StringComparison.OrdinalIgnoreCase) ||
+                    normalizedPath.StartsWith(epNorm + "/", StringComparison.OrdinalIgnoreCase))
+                {
+                    goto CheckOtherFilters;
+                }
+            }
+            return false;
+        }
+
+        CheckOtherFilters:
         // Перевірка виключених форматів
         if (normalizedExcludeFormats.Length > 0 && normalizedExcludeFormats.Contains(fileExt))
         {
             return false;
         }
-        
         // Перевірка виключених папок
         if (normalizedExcludeFolders.Length > 0)
         {
-            var normalizedPath = filePath.Replace('\\', '/');
-            if (normalizedExcludeFolders.Any(folder => 
-                normalizedPath.Contains(folder, StringComparison.OrdinalIgnoreCase)))
+            if (normalizedExcludeFolders.Any(folder => normalizedPath.Contains(folder, StringComparison.OrdinalIgnoreCase)))
             {
                 return false;
             }
         }
-        
         // Якщо вказані формати для включення - фільтруємо по них
         if (normalizedInclude.Length > 0)
         {
             return normalizedInclude.Contains(fileExt);
         }
-        
         // Інакше включаємо всі файли
         return true;
     }).ToList();
