@@ -29,7 +29,7 @@ ExtractLocres.exe --scan "C:\Games\GameName\Content\Paks" --include .locres
 | `--scan` | `-s` | Папка для сканування pak файлів | `-s "C:\Paks"` |
 | `--scan-pak` | `-sp` | Сканувати один pak файл (без екстракції) | `-sp "Game.pak"` |
 | `--output` | `-o` | Папка для збереження файлів | `-o "C:\Output"` |
-| `--include` | `-i` | Формати файлів для витягування | `-i .locres .uasset` |
+| `--include` | `-i` | Формати файлів для витягування/пошуку | `-i .locres .uasset` |
 | `--exclude-formats` | `-ef` | Формати для ігнорування | `-ef .uexp .ubulk` |
 | `--exclude-folders` | `-ex` | Папки для ігнорування | `-ex "Engine/Content"` |
 
